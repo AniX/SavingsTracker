@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <title>{% block title %}Note Taker{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/slate/bootstrap.min.css" rel="stylesheet">
+        <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+  </head>
+  
+  <body id="">
+            <script src="../assets/js/bsa.js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Note Taker</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+                <li><a href="/">View Notes</a> </li>
+                <li><a href="/create">Create Notes</a></li>
+                <li><a href="/test">My Tests</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  <div>
+    <div class="wrapper">
+    {% block content %}
+    {% endblock content %}
+    </div>
+    </div>
+     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
