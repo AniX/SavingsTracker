@@ -1,15 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
-<h2> You can create notes <a href="/create"><strong>here.</strong></a> </p2>
-{% for note in notes %}
-<p class="sticky taped" style="width: 250px;"> 
-    {{ note.text }}  <br />
-    Priority : {{ note.priority }} <br />
-    Created: {{ note.date.strftime('%Y-%m-%d')  }} <br/>
-    Status: {{ note.status }} 
-    (<a href ="edit/{{ note.key().id() }}">edit </a>)
-        <br /> 
-    --{{ note.author }} </p>
-{% endfor %}
-</p>
+
+ <div class="hero-unit" >
+        <h3>Savings Tracker</h3>
+        <p>Transform your savings, checking, and cash accounts with this budgeting lifesaver.  Avoid annual and unexpected budget busting pitfalls.  Divide your accounts into categories, set goals, and watch your balances grow.</p>
+</div>
+      <hr>
+<div class='container'>    
+<h4> Create reminder notes <a href="/create_note"><strong>here.</strong></a> </p4>
+    
+    <table cellpadding="0" cellspacing="0" border="0" width=95% class="table table-striped table-bordered" id="example">
+    <THead>
+        <TR>
+            <TH><strong>Note</strong></TH>
+            <TH><strong>Author</strong></TH>
+            <TH><strong>Priority</strong></TH>
+            <TH><strong>Status</strong></TH>
+            <TH><strong>Date</strong></TH>
+            <TH><strong>Manage</strong></TH>
+        </TR>
+    </THead>
+    <TBODY>
+        {% for note in notes %}
+        <TR>
+            <TD>{{ note.text }}</TD>
+            <TD>{{ note.author }}</TD>
+            <TD>{{ note.priority }}</TD>
+            <TD>{{ note.status }}</TD>
+            <TD>{{ note.date.strftime('%Y-%m-%d') }}</TD>
+            <TD><a href ="edit_note/{{ note.key().id() }}">Edit</a> <a href ="/delete_note/{{ note.key().id() }}">Delete</a></TD>
+        </TR>
+
+        {% endfor %}
+    </TBODY>
+    </Table>
+    </p>
+</div>
 {% endblock content %}

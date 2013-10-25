@@ -9,13 +9,11 @@
     </div>
     
     <div class="field-field">
-      <input type="text" name="author" id="id_author" />
+      <input type="text" name="author" value="{{ note.author }}" id="id_author" />
       
     </div>
     
   </div>
-  
-  
   
   <div class="field-wrapper">
     
@@ -24,13 +22,11 @@
     </div>
     
     <div class="field-field">
-      <input type="text" name="text" id="id_text" />
+      <input type="text" name="text" value="{{ note.text }}" id="id_text" />
       
     </div>
     
   </div>
-  
-  
   
   <div class="field-wrapper">
     
@@ -49,8 +45,6 @@
     
   </div>
   
-  
-  
   <div class="field-wrapper">
     
     <div class="field-label">
@@ -66,11 +60,11 @@
     </div>
     
   </div>
-  
+ <br /> 
+  <a href ="/delete/{{ note.key().id() }}">Delete Note</a>
+   <br />      
   
   <br>
   <input type="submit" value=submit />
 </form>
-
 {% endblock content %}
-

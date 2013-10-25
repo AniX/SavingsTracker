@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class='container'>
+    <H3><strong>View Accounts</strong></H3>
+    <table cellpadding="0" cellspacing="0" border="0" width=95% class="table table-striped table-bordered" id="example">
+        <THead>
+            <TR>
+                <TH width='20%'>Account</TH>
+                <TH width='20%'>Amount</TH>
+            </TR>
+        </THEAD>
+        
+        {% for acct in accts %}
+            <TR>
+                <TD width='20%'>{{ acct.name }}</TD>
+                <TD width='20%'>{{ acct.amount }}</TD>
+            </TR> 
+        {% endfor %} 
+        
+    </TABLE> 
+</div>
+{% endblock %}

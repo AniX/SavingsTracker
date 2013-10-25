@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class='container'>
+    <H3><strong>View Categories</strong></H3>
+    <table cellpadding="0" cellspacing="0" border="0" width=95% class="table table-striped table-bordered" id="example">
+        <THead>
+            <TR>
+                <TH width='20%'><strong>Category</strong></TH>
+                <TH width='20%'><strong>Amount</strong></TH>
+                <TH width='20%'><strong>Manage</strong></TH>
+            </TR>
+        </THEAD>
+        
+        <TBODY>
+        {% for cat in cats %}
+            <TR>
+                <TD width='20%'>{{ cat.name }}</TD>
+                <TD width='20%'>{{ cat.amount }}</TD>
+                <TD width='20%'><a href ="edit_category/{{ cat.key().id() }}">Edit</a> <a href ="/delete_category/{{ cat.key().id() }}">Delete</a></TD>
+            </TR> 
+        {% endfor %} 
+        </TBODY>
+        
+    </TABLE> 
+</div>
+{% endblock %}
