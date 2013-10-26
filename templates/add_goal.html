@@ -24,7 +24,7 @@
     <div class="field-field">
       <select type="select" name="category" id="id_cat" > 
         {% for c in cats %}
-        <option value='{{c.id}}'> {{ c.name }} </option>
+        <option value='{% c.id() %}'> {{ c.name }} </option>
         {% endfor %}
         </select>
     </div>
