@@ -38,7 +38,7 @@ class Goals(db.Model):
 
     name = db.StringProperty(required=True)
     amount = db.FloatProperty(required=True)
-    category = db.ReferenceProperty(Categories,)
+    category = db.ReferenceProperty(Categories)
     owner = db.UserProperty(auto_current_user_add=True)
     date = db.DateTimeProperty(auto_now_add=True)
     updated = db.DateTimeProperty(auto_now=True)

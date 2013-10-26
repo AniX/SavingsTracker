@@ -195,9 +195,12 @@ class AddGoal(BaseHandler):
 
     def post(self):
         user = users.get_current_user()
-        categories = db.Key.from_path('Goals','category',self.request.get('category'))
+        
+        cat_key = db.Key.from_path('Categories', int(self.request.get('category')))
+        logging.info('cat_key= '+ str(cat_key))
+        
         g = Goals(name=self.request.get('name'),
-            category = categories,
+                    category=cat_key,
                      amount=float(self.request.get('amount')))
         g.put()
         logging.info('************ ' + user.nickname() + ' Added Goal ' + g.name + ' *******')

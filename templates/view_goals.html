@@ -18,7 +18,7 @@
         {% for goal in goals %}
             <TR>
                 <TD width='20%'>{{ goal.name }}</TD>
-                <TD width='20%'>{{ goal.category }}</TD>
+                <TD width='20%'>{{ goal.category.name }}</TD>
                 <TD width='20%'>{{ goal.amount }}</TD>
                 <TD width='20%'><a href ="edit_goal/{{ goal.key().id() }}">Edit</a> <a href ="/delete_goal/{{ goal.key().id() }}">Delete</a></TD>
             </TR> 

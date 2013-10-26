@@ -1,0 +1,23 @@
+c= ahVkZXZ-dGhlc2F2aW5nc3RyYWNrZXJyGQsSCkNhdGVnb3JpZXMiCUVtZXJnZW5jeQw
+
+value = Emergency
+
+ckey = None
+
+
+
+
+
+
+
+
+goal cat (key):
+ahVkZXZ-dGhlc2F2aW5nc3RyYWNrZXJyGQsSCkNhdGVnb3JpZXMiCUVtZXJnZW5jeQw
+
+category key
+ahVkZXZ-dGhlc2F2aW5nc3RyYWNrZXJyFwsSCkNhdGVnb3JpZXMYgICAgIDQhwkM
+
+
+
+ahVkZXZ-dGhlc2F2aW5nc3RyYWNrZXJyGQsSCkNhdGVnb3JpZXMiCUVtZXJnZW5jeQw
+ahVkZXZ-dGhlc2F2aW5nc3RyYWNrZXJyFwsSCkNhdGVnb3JpZXMYgICAgIDQhwkM
